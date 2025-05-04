@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppleTech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="py-2 py-xl-3">
+        <div class="container d-flex justify-content-center justify-content-xl-between align-items-center flex-wrap flex-xl-nowrap">
+            <div>
+                <img src="image/apple_logo.png" width="200px" height="auto" alt="AppleTech Logo">
+                <span class="h1 d-block d-xl-inline-block text-center mt-2 mt-md-0 ms-md-2 ms-xl-3">AppleTech</span>
+            </div>
+            <div class="contact-info">
+                <p>вул. Хрещатик 27, Київ</p>
+                <p><a href="mailto:support@appletech.ua">support@appletech.ua</a></p>
+                <p><a href="tel:+380442001234">+380 44 200 1234</a></p>
+            </div>
+        </div>
+        <nav class="menu d-flex justify-content-center flex-column flex-xl-row justify-content-xl-between flex-wrap flex-xl-nowrap px-2 px-md-3 px-xl-4 py-2 position-fixed w-100 start-0 align-items-center">
+            <a href="index.html" class="btn btn-primary px-3 mb-3 mb-xl-0">Головна</a>
+            <a href="shop.html" class="btn btn-primary px-3 mb-3 mb-xl-0">Каталог</a>
+            <a href="contacts.html" class="btn btn-primary px-3 mb-3 mb-xl-0">Контакти</a>
+        </nav>
+    </header>
+
+    <body>
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <img id="product-image" src="product-image/iphone15/black.png" alt="Фото iPhone" class="product-image" />
+            </div>
+
+            <div class="col-md-6">
+              <h2>Apple iPhone 15</h2>
+              <div class="price-range" id="product-price">31999 грн</div>
+      
+              <p class="mt-3">Колір: <span id="selected-color-name">Чорний</span></p>
+              <div class="d-flex mb-3">
+                <div class="color-circle bg-black active" data-color="black" data-name="Чорний"></div>
+                <div class="color-circle" style="background-color: lightpink;" data-color="pink" data-name="Рожевий"></div>
+                <div class="color-circle bg-info" data-color="blue" data-name="Блакитний"></div>
+                <div class="color-circle bg-success" data-color="green" data-name="Зелений"></div>
+                <div class="color-circle bg-warning" data-color="yellow" data-name="Жовтий"></div>
+              </div>
+     
+              <p>Пам’ять: <span id="selected-memory">128GB</span></p>
+              <div class="btn-group mb-3">
+                <button class="btn btn-outline-primary active" data-memory="128">128GB</button>
+                <button class="btn btn-outline-primary" data-memory="256">256GB</button>
+                <button class="btn btn-outline-primary" data-memory="512">512GB</button>
+              </div>
+              <div>
+                <button class="btn btn-primary">Додати до кошика</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <script>
+          const colorCircles = document.querySelectorAll('.color-circle');
+          const productImage = document.getElementById('product-image');
+          const colorName = document.getElementById('selected-color-name');
+      
+          colorCircles.forEach(circle => {
+            circle.addEventListener('click', () => {
+              document.querySelector('.color-circle.active')?.classList.remove('active');
+              circle.classList.add('active');
+      
+              const color = circle.getAttribute('data-color');
+              const name = circle.getAttribute('data-name');
+              productImage.src = `product-image/iphone15/${color}.png`;
+              colorName.textContent = name;
+            });
+          });
+
+          const memoryButtons = document.querySelectorAll('[data-memory]');
+          const memoryText = document.getElementById('selected-memory');
+          const priceText = document.getElementById('product-price');
+
+          const memoryPrices = {
+            '128': 31999,
+            '256': 34999,
+            '512': 41999
+          };
+
+          memoryButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+              document.querySelector('[data-memory].active')?.classList.remove('active');
+              btn.classList.add('active');
+
+              const memory = btn.getAttribute('data-memory');
+              memoryText.textContent = memory + 'GB';
+              priceText.textContent = `${memoryPrices[memory]} грн`;
+            });
+          });
+        </script>
+      </body>
+
+    <footer class="py-3 py-xl-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="h5">Контакти</p>
+                    <p>вул. Хрещатик 27, Київ</p>
+                    <p><a href="mailto:support@appletech.ua">support@appletech.ua</a></p>
+                    <p><a href="tel:+380442001234">+380 44 200 1234</a></p>
+                </div>
+                <div class="col-md-6">
+                    <p class="h5">Соц. мережі</p>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('#menu-btn')?.addEventListener('click', function() {
+            document.querySelector('#menu-btn').classList.toggle('touch');
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

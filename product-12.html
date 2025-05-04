@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Air M2 13-inch - AppleTech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="py-2 py-xl-3">
+        <div class="container d-flex justify-content-center justify-content-xl-between align-items-center flex-wrap flex-xl-nowrap">
+            <div>
+                <img src="image/apple_logo.png" width="200px" height="auto" alt="AppleTech Logo">
+                <span class="h1 d-block d-xl-inline-block text-center mt-2 mt-md-0 ms-md-2 ms-xl-3">AppleTech</span>
+            </div>
+            <div class="contact-info">
+                <p>вул. Хрещатик 27, Київ</p>
+                <p><a href="mailto:support@appletech.ua">support@appletech.ua</a></p>
+                <p><a href="tel:+380442001234">+380 44 200 1234</a></p>
+            </div>
+        </div>
+        <div id="menu-btn" class="position-fixed d-xl-none">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <nav class="menu d-flex justify-content-center flex-column flex-xl-row justify-content-xl-between flex-wrap flex-xl-nowrap px-2 px-md-3 px-xl-4 py-2 position-fixed w-100 start-0 align-items-center">
+            <a href="index.html" class="btn btn-primary px-3 mb-3 mb-xl-0">Головна</a>
+            <a href="shop.html" class="btn btn-primary px-3 mb-3 mb-xl-0">Каталог</a>
+            <a href="contacts.html" class="btn btn-primary px-3 mb-3 mb-xl-0">Контакти</a>
+        </nav>
+    </header>
+    <main class="container py-3">
+        <h1 class="mb-3 mb-xl-4">MacBook Air M3 13-inch</h1>
+        <section class="product-details">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="product-image/MacBook Air M3 13/1.png" class="d-block w-100 rounded" alt="MacBook Air M3 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="product-image/MacBook Air M3 13/1.png" class="d-block w-100 rounded" alt="MacBook Air M3 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="product-image/MacBook Air M3 13/1.png" class="d-block w-100 rounded" alt="MacBook Air M3 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="product-image/MacBook Air M3 13/1.png" class="d-block w-100 rounded" alt="MacBook Air M3 4">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-2">Apple MacBook Air M3 13,6″ MLY33 (2022) Midnight</h2>
+                    <p class="fs-4 mb-2"><span id="product-price" class="fw-bold">51999 - 57999 грн</span></p>
+                    <p class="mb-3">MacBook Air M3 Экран 13.6″ (2560×1664) Liquid Retina Display/ Apple M2 8 core CPU / RAM 8 ГБ / SSD 256 ГБ / 8 core GPU / Midnight</p>
+                    <div class="mb-3">
+                        <p class="mb-1">Пам’ять: <span id="selected-storage">512GB</span></p>
+                        <div class="storage-options d-flex gap-2">
+                            <button class="storage-btn active" data-storage="512">512GB</button>
+                            <button class="storage-btn" data-storage="1024">1TB</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg">Додати до кошика</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-3 py-xl-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="h5">Контакти</p>
+                    <p>вул. Хрещатик 27, Київ</p>
+                    <p><a href="mailto:support@appletech.ua">support@appletech.ua</a></p>
+                    <p><a href="tel:+380442001234">+380 44 200 1234</a></p>
+                </div>
+                <div class="col-md-6">
+                    <p class="h5">Соц. мережі</p>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector('#menu-btn').addEventListener('click', function() {
+            document.querySelector('#menu-btn').classList.toggle('touch');
+            document.querySelectorAll('.menu')[0].classList.toggle('show');
+        });
+
+        const storageButtons = document.querySelectorAll('.storage-btn');
+        const priceElement = document.querySelector('#product-price');
+        const selectedStorage = document.querySelector('#selected-storage');
+        const storagePrices = {
+            '512': 51999,
+            '1024': 57999
+        };
+
+        storageButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                storageButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                const storage = this.getAttribute('data-storage');
+                priceElement.textContent = `${storagePrices[storage]} грн`;
+                selectedStorage.textContent = `${storage}`;
+            });
+        });
+    </script>
+</body>
+</html>
